@@ -1,50 +1,131 @@
-# Welcome to your Expo app 👋
+# rig-ui-screens
+## RigBookingApp (Borewell Rig Rental)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 🚧 Project Status: Under Development 🚧
 
-## Get started
+This is a React Native mobile application built with Expo for booking borewell rigs. The project is currently in the front-end development phase, focusing on core booking functionalities and user profile management.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 🚀 Features Implemented
 
-2. Start the app
+The application currently supports the following key functionalities:
 
-   ```bash
-   npx expo start
-   ```
+* **Rig Listing:** Browse a list of available borewell rigs.
+* **Rig Details & Booking:**
+    * View detailed information for a selected rig.
+    * Select a booking date using a calendar picker.
+    * Choose an available time slot using a dropdown picker.
+    * Enter user contact details (name, phone number).
+    * **Booking Confirmation:** A placeholder alert confirms the booking details (no backend integration yet).
+* **User Profile Management:** A dedicated section for user-specific functionalities.
+    * **Profile Dashboard:** Main entry point for profile-related actions.
+    * **Edit Profile:** Update personal information such as name, email, location, and phone number with basic client-side validation.
+    * **Booking History:** View a list of past, upcoming, completed, pending, and canceled bookings (using dummy data).
+    * **Saved Addresses:** Manage frequently used drilling locations (using dummy data, with placeholder for add/edit/delete actions).
+    * **App Settings:** Configure application preferences (e.g., push notifications, location services, privacy policy, app version).
+    * **Help & Support:** Access FAQs and contact information for support.
+* **Consistent Navigation:**
+    * Utilizes Expo Router for file-system-based routing.
+    * Ensures consistent header styles and navigation behavior across all profile-related screens via `profile/_layout.tsx`.
+    * Integrates a Drawer Navigator for top-level navigation, including a custom header.
+    * Uses a Tab Navigator for the main "Home" section.
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🛠️ Technology Stack
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+* **React Native:** A framework for building native mobile apps using React.
+* **Expo:** A platform for universal React applications, providing tools and services for development, building, and deployment.
+* **Expo Router:** File-system-based routing for React Native and web applications built with Expo.
+* **React Navigation:** Used for Drawer and Tab navigators.
+* **`react-native-calendars`:** For the date selection component in the booking form.
+* **`react-native-dropdown-picker`:** For the time slot selection component in the booking form.
+* **`@expo/vector-icons`:** For a rich set of icons used throughout the UI.
+* **`react-native-gesture-handler` & `react-native-reanimated`:** Core dependencies for React Navigation's drawer and stack navigators.
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## 📦 Installation
 
-```bash
-npm run reset-project
-```
+To get a local copy up and running, follow these simple steps.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Prerequisites
 
-## Learn more
+* Node.js (LTS version recommended)
+* npm or Yarn (npm comes with Node.js)
+* Expo CLI (`npm install -g expo-cli` if you don't have it)
 
-To learn more about developing your project with Expo, look at the following resources:
+### Steps
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/your-username/rig-ui-screens.git](https://github.com/your-username/rig-ui-screens.git)
+    cd rig-ui-screens
+    ```
+    *(Remember to replace `your-username/rig-ui-screens.git` with your actual repository URL)*
 
-## Join the community
+2.  **Install Dependencies:**
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
 
-Join our community of developers creating universal apps.
+3.  **Start the Expo Development Server:**
+    ```bash
+    npm start
+    # or
+    npx expo start
+    ```
+    This command will open a new tab in your web browser with the Expo Dev Tools.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+4.  **Run on a Device or Emulator:**
+    From the Expo Dev Tools page, you can:
+    * Scan the QR code with the **Expo Go app** on your physical Android or iOS device.
+    * Press `a` in the terminal to open on an **Android emulator**.
+    * Press `i` in the terminal to open on an **iOS simulator** (macOS only).
+    * Press `w` to open in your web browser (might have UI inconsistencies compared to native).
+
+---
+
+## 📱 Usage
+
+Once the app is running on your device or emulator:
+
+1.  **Browse Rigs:** The default screen will display a list of available borewell rigs (the "Home" tab).
+2.  **View Rig Details & Book:** Tap on any rig card to navigate to its details page. Here, you can select a booking date/time and fill in contact information. Tapping "Book Now" will trigger a confirmation alert.
+3.  **Access Main Navigation (Drawer):** Tap the **menu icon (☰)** in the top-left corner of the "Rigs" screen header to open the main drawer navigator.
+4.  **Navigate to Profile:** From the drawer, select "My Profile" to access the user's profile dashboard.
+5.  **Explore Profile Features:** Within the profile section, you can:
+    * Tap "Edit Profile" to update personal details.
+    * Tap "Booking History" to see simulated past and upcoming bookings.
+    * Tap "Saved Addresses" to manage frequently used locations.
+    * Tap "App Settings" to adjust various application preferences.
+    * Tap "Help & Support" for assistance.
+
+---
+
+## 📂 Project Structure (Key Files/Folders)
+
+```text
+rig-ui-screens/
+├── app/
+│   ├── (tabs)/                 # Bottom tab navigator group
+│   │   ├── index.tsx           # Main Rig Listing (Home tab screen)
+│   │   └── _layout.tsx         # Defines the Tab Navigator for the bottom tabs
+│   ├── booking/
+│   │   └── [id].tsx            # Dynamic route for specific Rig Details & Booking Form
+│   ├── profile/
+│   │   ├── _layout.tsx         # Defines the Stack Navigator for all profile screens
+│   │   ├── index.tsx           # Main Profile Dashboard (entry point to profile features)
+│   │   ├── bookingHistory.tsx  # Screen for displaying booking history
+│   │   ├── editProfile.tsx     # Screen for editing user profile information
+│   │   ├── helpAndSupport.tsx  # Screen for help and support content
+│   │   ├── savedAddresses.tsx  # Screen for managing user's saved addresses
+│   │   └── settings.tsx        # Screen for application settings
+│   ├── _layout.tsx             # Root layout of the application (defines the Drawer Navigator)
+├── assets/                     # Directory for images, fonts, and other static assets
+├── app.json                    # Expo project configuration file
+├── package.json                # Node.js project dependencies and scripts
+└── README.md                   # This README file
