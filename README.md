@@ -106,6 +106,33 @@ Once the app is running on your device or emulator:
 
 ---
 
+## 📸 Screenshots
+
+Here's a visual tour of the app's key screens and features.
+
+*(To add your screenshots, upload them to your GitHub repository (e.g., in an `assets/screenshots` folder) or an image hosting service, and then replace the placeholder lines below with actual Markdown image links. For best results, use consistent image sizes or dimensions.)*
+
+**Home Screen (Rig Listing)**
+![Home Screen](IMG-20250618-WA0012.jpg) 
+*Or if hosted: `![Home Screen](https://your-image-hosting-service.com/home-screen.png)`*
+
+**Rig Details & Booking**
+![Rig Details & Booking](IMG-20250618-WA0009.jpg)
+
+**Profile Dashboard**
+![Profile Dashboard](IMG-20250618-WA0015.jpg)
+
+**Edit Profile**
+![Edit Profile](IMG-20250618-WA0011.jpg)
+
+**Help & Support**
+![Help & Support](IMG-20250618-WA0013.jpg)
+
+**App Settings**
+![App Settings](IMG-20250618-WA0014.jpg)
+
+---
+
 ## 📂 Project Structure (Key Files/Folders)
 
 ```text
@@ -131,5 +158,3 @@ rig-ui-screens/
 └── README.md                   # This README file
 
 
-## Screens
-![IMG-20250618-WA0009](https://github.com/user-attachments/assets/57f0c733-aa25-4860-a544-58b5fbf76fed)
