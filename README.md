@@ -129,3 +129,7 @@ rig-ui-screens/
 ├── app.json                    # Expo project configuration file
 ├── package.json                # Node.js project dependencies and scripts
 └── README.md                   # This README file
+
+
+## Screens
+![IMG-20250618-WA0009](https://github.com/user-attachments/assets/57f0c733-aa25-4860-a544-58b5fbf76fed)
